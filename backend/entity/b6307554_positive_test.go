@@ -12,7 +12,7 @@ type Employee struct {
 	gorm.Model
 	Name       string `valid:"required~Name can not Blank"`
 	Email      string
-	EmployeeID string `valid:"matches(^[MJS]\\d{8}$)"`
+	EmployeeID string `valid:"matches(^[MJS]\\d{8}$)~EmployeeID not true form"`
 }
 
 func TestEmployeeValidation(t *testing.T) {
